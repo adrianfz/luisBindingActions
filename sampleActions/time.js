@@ -1,5 +1,5 @@
 var util = require('util');
-var LuisActions = require('./core');
+var LuisActions = require('../core');
 
 var TimeInPlaceAction = {
     intentName: 'TimeInPlace',

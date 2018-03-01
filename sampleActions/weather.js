@@ -1,6 +1,6 @@
 var util = require('util');
 var rp = require('request-promise');
-var LuisActions = require('./core');
+var LuisActions = require('../core');
 
 var ApixuApiKey = process.env.APIXU_API_KEY;
 

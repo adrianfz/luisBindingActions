@@ -1,6 +1,6 @@
 // export samples
 module.exports = []
-    .concat(require('./time'))
-    .concat(require('./hotels'))
-    .concat(require('./weather'))
-    .concat(require('./airports'));
+    .concat(require('./sampleActions/time'))
+    .concat(require('./sampleActions/hotels'))
+    .concat(require('./sampleActions/weather'))
+    .concat(require('./sampleActions/airports'));
