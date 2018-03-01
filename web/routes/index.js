@@ -6,7 +6,7 @@ var express = require('express');
 var router = express.Router();
 var _ = require('lodash');
 
-var LuisActions = require('../../../core');
+var LuisActions = require('../../core');
 
 var ModelUrl = process.env.LUIS_MODEL_URL;
 var SampleActions = require('../../all');
