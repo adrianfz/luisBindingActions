@@ -6,7 +6,7 @@ var _ = require('lodash');
 var util = require('util');
 var readline = require('readline');
 
-var LuisActions = require('../../core');
+var LuisActions = require('../core');
 
 var SampleActions = require('../all');
 var SampleActionsModelUrl = process.env.LUIS_MODEL_URL;

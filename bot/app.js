@@ -6,6 +6,7 @@ var restify = require('restify');
 var LuisActions = require('../core');
 var SampleActions = require('../all');
 var LuisModelUrl = process.env.LUIS_MODEL_URL;
+var inMemoryStorage = new builder.MemoryBotStorage();
 
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
@@ -18,7 +19,8 @@ var connector = new builder.ChatConnector({
 });
 server.post('/api/messages', connector.listen());
 
-var bot = new builder.UniversalBot(connector);
+var bot = new builder.UniversalBot(connector)
+                    .set('storage', inMemoryStorage); // Register in-memory storage 
 var recognizer = new builder.LuisRecognizer(LuisModelUrl);
 var intentDialog = bot.dialog('/', new builder.IntentDialog({ recognizers: [recognizer] })
     .onDefault(DefaultReplyHandler));
